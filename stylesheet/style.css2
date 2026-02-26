@@ -1,0 +1,2342 @@
+/* === Общие стили для кнопок === */
+.common-button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 21px 10px 21px 30px;
+  gap: 30px;
+  width: 247px;
+  height: 65px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.common-button--filled {
+  background: #CBB89A;
+  color: #FFFFFF;
+  border: 1px solid #CBB89A;
+  /* Добавляем рамку для единообразия */
+}
+
+.common-button--filled:hover {
+  background: #6F5438;
+  border-color: #6F5438;
+  /* Изменяем цвет рамки при наведении */
+}
+
+.common-button--outlined {
+  border: 1px solid #CBB89A;
+  color: #6F5438;
+  background: transparent;
+  /* Убедимся, что фон прозрачный */
+}
+
+.common-button--outlined:hover {
+  background: #6F5438;
+  color: #FFFFFF;
+  border-color: #6F5438;
+}
+
+.common-button span {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.common-button-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.common-button-icon--filled {
+  background: #6F5438;
+}
+
+.common-button-icon--outlined {
+  background: #CBB89A;
+}
+
+.common-button--filled:hover .common-button-icon--filled {
+  background: #CBB89A;
+}
+
+.common-button--outlined:hover .common-button-icon--outlined {
+  background: #CBB89A;
+}
+
+.common-button-icon svg path {
+  stroke: #FFFFFF;
+}
+
+/* === Стили для "about-events-block" === */
+.about-events-block {
+  margin-bottom: 50px;
+}
+
+.wrapper .about-events-block .wrapper {
+  padding: 0;
+}
+.about-events-block .wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: 272px;
+}
+
+.about-events-block-article .wrapper {
+  height: auto;
+}
+
+.about-events-block__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 90px 60px;
+  gap: 150px;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.about-events-block__title-column {
+  flex-shrink: 0;
+  width: 272px;
+}
+
+.about-events-block__title {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 51px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #6F5438;
+  margin: 0;
+}
+
+.about-events-block__title--hidden {
+  display: none;
+  width: 303px;
+}
+
+.about-events-block__content-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 60px;
+  flex-grow: 1;
+  width: 658px;
+}
+
+.about-events-block__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 60px;
+  width: 100%;
+}
+
+.about-events-block__description {
+  width: 100%;
+  height: 92px;
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: rgba(111, 84, 56, 0.5);
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.about-events-block-article .about-events-block__description {
+  height: auto;
+  overflow: initial;
+  text-overflow: initial;
+  display: block;
+  -webkit-line-clamp: initial;
+  -webkit-box-orient: initial;
+}
+
+/* === Адаптивность для "about-events-block" === */
+@media (max-width: 1200px) {
+  .about-events-block .wrapper {
+    width: auto;
+    height: auto;
+    padding: 0 20px;
+  }
+
+  .about-events-block__inner {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    height: auto;
+  }
+
+  .about-events-block__title-column,
+  .about-events-block__content-column {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .about-events-block__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .about-events-block__description {
+    height: auto;
+    -webkit-line-clamp: unset;
+    font-size: 16px;
+  }
+
+  .about-events-block__description-wrapper {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-events-block__inner {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .about-events-block__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .about-events-block__description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .about-events-block__description-wrapper {
+    gap: 20px;
+  }
+}
+
+/* === Стили для нового блока "delivery-block" === */
+.delivery-block {
+  margin-bottom: 50px;
+  /* margin-top: 60px; */
+}
+
+.delivery-block .wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* === Стили для контейнера заголовка и кнопки "Доставка" === */
+.delivery-block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.delivery-block__title {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 51px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #6F5438;
+  /* margin: 60px 0 50px 0; */
+  margin: 0;
+}
+
+.delivery-block__products-container {
+  position: relative;
+}
+
+/* Переопределяем стили OpenCart/Swiper для контейнера Swiper */
+.delivery-block__products-container .relative.tab-control {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Стилизация карточки товара внутри свайпера */
+.delivery-block__products-container .product-row-item {
+  width: 24% !important;
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px !important;
+  margin-top: 0;
+}
+
+
+
+.delivery-block__products-container .product-row-item .image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.delivery-block__products-container .product-row-item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.delivery-block__products-container .product-row-item:hover .image img {
+  transform: scale(1.05);
+}
+
+.delivery-block__products-container .product-row-item .caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.delivery-block__products-container .product-row-item .caption .name {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #6F5438;
+  margin: 0 0 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+.delivery-block__products-container .product-row-item .caption .name:hover {
+  color: #CBB89A;
+}
+
+.delivery-block__products-container .product-row-item .btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.delivery-block__products-container .product-row-item .price {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #6F5438;
+}
+
+.delivery-block__products-container .product-row-item .qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  padding: 5px;
+}
+
+.delivery-block__products-container .product-row-item .qty button {
+  background: #6F5438;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delivery-block__products-container .product-row-item .qty button:hover {
+  background: #5a422e;
+}
+
+.delivery-block__products-container .product-row-item .qty span {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  min-width: 25px;
+  text-align: center;
+  padding: 0 5px;
+}
+
+/* Стилизация стрелок Swiper */
+.delivery-block__products-container .swiper-button-next,
+.delivery-block__products-container .swiper-button-prev {
+  color: #6F5438;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.delivery-block__products-container .swiper-button-next:hover,
+.delivery-block__products-container .swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.delivery-block__products-container .swiper-button-next::after,
+.delivery-block__products-container .swiper-button-prev::after {
+  font-size: 20px;
+  --swiper-navigation-size: 20px;
+}
+
+/* Адаптивность для "delivery-block" */
+@media (max-width: 1200px) {
+  .delivery-block__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .delivery-block__products-container .product-row-item {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .delivery-block__products-container .product-row-item .image {
+    height: 250px;
+  }
+
+  .delivery-block__products-container .product-row-item .caption {
+    padding: 20px;
+  }
+
+  .delivery-block__products-container .product-row-item .price {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .delivery-block__products-container .swiper-button-next,
+  .delivery-block__products-container .swiper-button-prev {
+    top: calc(30% + 50px);
+    width: 40px;
+    height: 40px;
+  }
+
+  .delivery-block__header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .common-button {
+    max-width: 280px;
+    justify-content: center;
+    padding: 18px 10px 18px 25px;
+    height: 55px;
+  }
+
+  .common-button-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .delivery-block__title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .delivery-block__products-container .product-row-item {
+    width: 100% !important;
+    max-width: 387px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .delivery-block__products-container .product-row-item .image {
+    height: 200px;
+  }
+
+  .delivery-block__products-container .product-row-item .caption {
+    padding: 15px;
+  }
+
+  .delivery-block__products-container .product-row-item .caption .name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .delivery-block__products-container .product-row-item .price {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .delivery-block__products-container .product-row-item .qty button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .delivery-block__products-container .product-row-item .qty button i {
+    font-size: 12px;
+  }
+
+  .delivery-block__products-container .product-row-item .qty span {
+    font-size: 16px;
+  }
+
+  .delivery-block__products-container .swiper-button-next,
+  .delivery-block__products-container .swiper-button-prev {
+    display: none;
+  }
+
+  .delivery-block__header {
+    margin-bottom: 30px;
+  }
+
+  .common-button {
+    padding: 15px 10px 15px 20px;
+    height: 45px;
+    font-size: 12px;
+  }
+
+  .common-button-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* === Стили для "news-block" === */
+
+.news {
+  margin-bottom: 50px;
+}
+
+.news .wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.news__tabs-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 30px;
+  width: auto;
+  height: 51px;
+  margin-left: 0;
+  /* margin-top: 60px; */
+  margin-bottom: 50px;
+}
+
+.news__tabs {
+  margin-bottom: 0;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  justify-content: flex-start;
+}
+
+.news__tabs .nav-item {
+  margin-right: 0;
+}
+
+.news__tabs .nav-link {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 51px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(111, 84, 56, 0.15);
+  padding: 0;
+  border: none;
+  background: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news__tabs .nav-item.active .nav-link,
+.news__tabs .nav-link.active {
+  font-weight: 600;
+  color: #6F5438;
+  border: none;
+}
+
+.news__tab-divider {
+  width: 30px;
+  height: 0px;
+  border-top: 2px solid rgba(111, 84, 56, 0.15);
+  margin: 0 15px;
+  transform: rotate(90deg);
+}
+
+.news .tab-content {
+  margin-bottom: 40px;
+}
+
+.news .tab-pane {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.news .tab-pane.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.news-card {
+  width: 387px;
+  height: 549px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.news-card__area-link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.news-card__figure {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.news-card__image {
+  position: absolute;
+  width: 590px;
+  height: 394px;
+  left: -101.5px;
+  top: -94px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.news-card:hover .news-card__image {
+  transform: scale(1.05);
+}
+
+.news-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  height: calc(100% - 300px);
+  box-sizing: border-box;
+}
+
+.news-card__title {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #6F5438;
+  margin: 0 0 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news-card__description {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(111, 84, 56, 0.5);
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  flex-grow: 1;
+}
+
+.news-card__details-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  color: inherit;
+}
+
+.news-card__details-text {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6F5438;
+  transition: color 0.3s ease;
+}
+
+.news-card__details-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.news-card__details-icon-wrapper svg {
+  display: block;
+}
+
+.news-card__details-icon-wrapper svg path {
+  stroke: #6F5438;
+  transition: stroke 0.3s ease;
+}
+
+.news-card:hover .news-card__details-text {
+  color: #CBB89A;
+}
+
+.news-card:hover .news-card__details-icon-wrapper svg path {
+  stroke: #CBB89A;
+}
+
+@media (max-width: 1200px) {
+  .news-card {
+    width: calc(50% - 10px);
+    max-width: 387px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .news-card {
+    width: 100%;
+    max-width: 387px;
+    height: auto;
+  }
+
+  .news-card__figure {
+    height: 200px;
+  }
+
+  .news-card__image {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .news-card__body {
+    padding: 20px;
+    height: auto;
+  }
+
+  .news-card__title {
+    margin-bottom: 5px;
+  }
+
+  .news-card__details-button {
+    margin-top: 15px;
+  }
+
+  .news-card__description {
+    -webkit-line-clamp: 4;
+  }
+}
+
+.contacts-block {
+  margin-bottom: 50px;
+}
+
+.contacts-block .wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.contacts-block__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  height: 418px;
+}
+
+.contacts-block__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px;
+  width: 523px;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.contacts-block__info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
+  width: 100%;
+}
+.contacts-block__info .rooms-gallery__button{
+  align-self: flex-end;
+}
+.contacts-block__info .rooms-gallery__button:hover{
+  background: #6F5438;
+}
+
+.contacts-block__title {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 51px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #6F5438;
+  margin: 0;
+  width: 100%;
+}
+
+.contacts-block__description {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: rgba(111, 84, 56, 0.5);
+  margin: 0;
+  width: 100%;
+  height: 92px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+
+.contacts-block__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+  width: 657px;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px;
+  gap: 30px;
+  width: 100%;
+  height: 126px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.contact-card__icon {
+  width: 45px;
+  height: 45px;
+  background: #CBB89A;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.contact-card__icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.contact-card__icon svg path {
+  fill: #ffffff
+}
+
+.contact-card__details {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.contact-card__label {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #6F5438;
+  width: 100px;
+  border-right: 2px solid #CBB89A26;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-card__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.contact-card__category {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(111, 84, 56, 0.25);
+  text-transform: uppercase;
+}
+
+.contact-card__category:empty {
+  display: none;
+}
+
+.contact-card__value {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: rgba(111, 84, 56, 0.65);
+}
+
+.contact-card__label+.contact-card__row:first-of-type {
+  margin-top: 5px;
+}
+
+/* === Адаптивность для "contacts-block" === */
+@media (max-width: 1200px) {
+  .contacts-block .wrapper {
+    width: auto;
+    padding: 0 20px;
+  }
+
+  .contacts-block__inner {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+  }
+
+  .contacts-block__info,
+  .contacts-block__details {
+    width: 100%;
+    height: auto;
+  }
+
+  .contacts-block__info {
+    padding: 30px;
+  }
+
+  .contacts-block__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .contacts-block__description {
+    font-size: 16px;
+    line-height: 20px;
+    height: auto;
+    -webkit-line-clamp: unset;
+  }
+
+  .contact-card {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .contact-card__label {
+    margin-top: 10px;
+  }
+
+  .contact-card__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-block__inner {
+    gap: 20px;
+  }
+
+  .contacts-block__info {
+    padding: 20px;
+  }
+
+  .contacts-block__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .contacts-block__description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+// a:focus, a:hover{
+//     color:inherit!important;
+// }
+/* === Стили для "shipping-block" === */
+.shipping-block {
+  height: 402px;
+  flex: none;
+  /* order: 6; */
+  flex-grow: 0;
+  margin-bottom: 50px;
+}
+
+.nav-tabs {
+  column-gap: 0px;
+}
+
+.nav-tabs>li.active>a {
+  background-color: inherit !important;
+}
+
+.shipping-block .wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shipping-block__inner-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shipping-block__tabs-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 30px;
+  width: auto;
+  height: 51px;
+}
+
+.shipping-block__tabs {
+  margin-bottom: 0;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  justify-content: flex-start;
+}
+
+.shipping-block__tabs .nav-item {
+  margin-right: 0;
+}
+
+.shipping-block__tabs .nav-link {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 51px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(111, 84, 56, 0.15);
+  padding: 0;
+  border: none;
+  background: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shipping-block__tabs .nav-item.active .nav-link,
+.shipping-block__tabs .nav-link.active {
+  font-weight: 600;
+  color: #6F5438;
+  border: none;
+}
+
+.shipping-block__tab-divider {
+  width: 30px;
+  height: 0px;
+  border-top: 2px solid rgba(111, 84, 56, 0.15);
+  margin: 0 15px;
+  transform: rotate(90deg);
+}
+
+.shipping-block__tab-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+  width: 100%;
+  height: 321px;
+  flex-grow: 1;
+}
+
+.shipping-block__gallery-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Стили для внутреннего содержимого $Position_5 и $Position_6, 
+основываясь на инспекторе кода, где есть <section class="banket"> */
+.shipping-block__gallery-container .banket {
+  width: 100%;
+  height: 100%;
+}
+
+.shipping-block__gallery-container .banket>.wrapper {
+  padding: 0;
+}
+
+.shipping-block__gallery-container .banket .head {
+  display: none;
+}
+
+.shipping-block__gallery-container .banket .swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.shipping-block__gallery-container .banket .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.shipping-block__gallery-container .banket .swiper-slide {
+  width: 387px !important;
+  height: 321px;
+  margin-right: 20px !important;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.shipping-block__gallery-container .banket .swiper-slide:last-child {
+  margin-right: 0 !important;
+}
+
+.shipping-block__gallery-container .banket-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.shipping-block__gallery-container .banket-item img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.shipping-block__gallery-container .banket-item::before {
+  content: '';
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: linear-gradient(180deg, rgba(16, 16, 16, 0.1275) 50%, rgba(16, 16, 16, 0.7225) 100%);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.shipping-block__gallery-container .banket-item .caption {
+  position: absolute;
+  left: 30px;
+  top: 268px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.shipping-block__gallery-container .banket-item .caption .name {
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shipping-block__gallery-container .banket-item .caption .text {
+  display: none;
+}
+
+.shipping-block__gallery-container .banket-item .caption .text span {
+  display: none;
+}
+
+.shipping-block__gallery-container .banket-item .caption .text i {
+  display: none;
+}
+
+.shipping-block__see-all {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.events-gallery__button-icon:hover {
+  background: white;
+}
+
+
+#zakazBanket .modal-dialog {
+  margin: 0;
+}
+
+#zakazBanket .modal-header {
+  border: none;
+  min-height: 0;
+  padding: 0;
+  margin-bottom: 27px;
+}
+
+#zakazBanket .modal-dialog .modal-content {
+  padding: 27px 50px;
+}
+
+#zakazBanket .modal-body {
+  padding: 0;
+}
+
+#zakazBanket .modal-title {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+@media (min-width: 576px) {
+  #zakazBanket .modal-dialog {
+    max-width: 540px;
+  }
+}
+
+#banket-zayavka .form-control {
+  height: 60px;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 0 30px;
+  border: 1px solid #d9d9d9;
+}
+
+#banket-zayavka select.form-control {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='25' height='25' rx='5' fill='%23CBB89A' /%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19 10.2001C19 10.3793 18.9292 10.5585 18.7884 10.695L13.0107 16.2947C12.7283 16.5684 12.2719 16.5684 11.9895 16.2947L6.21179 10.695C5.9294 10.4213 5.9294 9.97895 6.21179 9.70526C6.49417 9.43158 6.95061 9.43158 7.233 9.70526L12.5001 14.8101L17.7672 9.70526C18.0496 9.43158 18.506 9.43158 18.7884 9.70526C18.9292 9.84176 19 10.0209 19 10.2001Z' fill='white' /%3E%3C/svg%3E");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+}
+
+#banket-zayavka .form-group {
+  margin-bottom: 10px;
+}
+
+#banket-zayavka label.control-label {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6f5438;
+  margin-bottom: 18px;
+}
+
+#banket-zayavka .form-slider {
+  margin-top: 30px;
+}
+
+#banket-zayavka .noUi-target {
+  margin-bottom: 45px;
+}
+
+#banket-zayavka .noUi-connects {
+  height: 1px;
+  background: #D9D9D9;
+}
+
+#banket-zayavka .noUi-connect {
+  background: #6F5438;
+}
+
+#banket-zayavka .noUi-handle {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #6f5438;
+  background: #f7f3f0;
+}
+
+#banket-zayavka .noUi-tooltip {
+  font-size: 14px;
+  color: #6f5438;
+  padding: 0;
+  border: none;
+  bottom: auto;
+  background: transparent;
+  top: calc(100% + 6px);
+}
+
+#banket-zayavka .btn {
+  height: 65px;
+  border-radius: 35px;
+  background: #cbb89a;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* === Стили для "events-gallery" === */
+.events-gallery {
+  /* Group 51 */
+  flex: none;
+  /* order: 4; */
+  /* Позиция в соответствии с Figma (после shipping-block) */
+  flex-grow: 0;
+  margin-bottom: 50px;
+  /* Отступ снизу */
+}
+
+.events-gallery .wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+  /* Обрезает содержимое, выходящее за границы */
+}
+
+.events-gallery__header {
+  /* Group 4 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  margin-bottom: 30px;
+}
+
+.events-gallery__title {
+  /* Мероприятия */
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 51px;
+  text-transform: uppercase;
+  color: #6F5438;
+  margin: 0;
+}
+
+.events-gallery__button {
+  /* Frame 3 (Кнопка "Заказать банкет") */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 21px 10px 21px 30px;
+  gap: 30px;
+  width: 247px;
+  /* Ширина кнопки из Figma */
+  height: 65px;
+  border: 1px solid #CBB89A;
+  border-radius: 100px;
+  text-decoration: none;
+  color: #6F5438;
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.events-gallery__button:hover {
+  background-color: #CBB89A;
+  color: #FFFFFF !important;
+  text-decoration: none;
+}
+
+.events-gallery__button:hover .events-gallery__button-icon {
+  background: #FFFFFF;
+  /* Меняем фон на белый при наведении */
+}
+
+.events-gallery__button:hover .events-gallery__button-icon svg path {
+  stroke: #CBB89A;
+  /* Цвет стрелки при наведении */
+}
+
+.events-gallery__button span {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.events-gallery__button-icon {
+  /* Frame 4 */
+  width: 45px;
+  height: 45px;
+  background: #CBB89A;
+  border-radius: 100px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.events-gallery__button-icon svg {
+  /* Icon */
+  width: 14px;
+  height: 11px;
+  left: calc(50% - 14px/2 - 0.5px);
+  /* Убираем сдвиг, чтобы было по центру */
+  top: calc(50% - 11px/2);
+  /* Убираем сдвиг, чтобы было по центру */
+  position: absolute;
+  transform: rotate(0deg);
+  /* Убираем поворот, если не нужен */
+}
+
+.events-gallery__button-icon svg path {
+
+  transition: stroke 0.3s ease;
+}
+
+/* Swiper-контейнер для галереи мероприятий */
+.events-gallery-swiper {
+  /* width: calc(100% - 40px); */
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.events-gallery__grid {
+  /* Frame 5 */
+  display: flex;
+  /* Swiper-wrapper уже flex */
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 0px;
+  /* Интервал между слайдами */
+  width: 100%;
+  height: 400px;
+  /* Высота слайдера */
+}
+
+/* Элементы галереи мероприятий */
+.events-gallery__item {
+  /* Frame 13, 14, 15, 16 */
+  position: relative;
+  height: 400px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  /* flex: none; */
+  /* Swiper управляет */
+  /* order: 0; */
+  /* flex-grow: 1; */
+  /* Swiper управляет */
+}
+
+.events-gallery__image {
+  /* image 2 */
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* border-radius: 20px; */
+  /* Добавляйте к .events-gallery__item */
+  transition: transform 0.3s ease;
+}
+
+.events-gallery__item:hover .events-gallery__image {
+  transform: scale(1.05);
+  /* Увеличиваем изображение при наведении */
+}
+
+.events-gallery__image::after {
+  /* Градиент */
+  content: '';
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: linear-gradient(180deg, rgba(16, 16, 16, 0.1275) 60.32%, rgba(16, 16, 16, 0.7225) 100%);
+  border-radius: 20px;
+}
+
+.events-gallery__name {
+  /* Новый год, Детские праздники, Банкет, Свадьба */
+  position: absolute;
+  width: auto;
+  height: 23px;
+  left: 30px;
+  top: 347px;
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  z-index: 10;
+}
+
+.events-gallery__icon {
+  /* Frame 4 (Круглая иконка в углу) */
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  right: 30px;
+  /* Изменено, чтобы был справа */
+  top: 30px;
+  /* Изменено, чтобы был сверху */
+  background: #CBB89A;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.events-gallery__icon svg {
+  /* Icon */
+  position: relative;
+  /* Для того, чтобы смещение было от icon-bg */
+  width: 14px;
+  height: 11px;
+  /* left: calc(50% - 14px/2 - 2.34px); */
+  /* Убрано */
+  /* top: calc(50% - 11px/2 - 3.34px); */
+  /* Убрано */
+  transform: rotate(0deg);
+  /* Убрано, если не нужно */
+  transition: transform 0.3s ease;
+}
+
+.events-gallery__item:hover .events-gallery__icon svg {
+  transform: rotate(-45deg);
+  /* Поворачиваем стрелку при наведении */
+}
+
+.events-gallery__icon svg path {
+  stroke: #FFFFFF;
+  /* Цвет стрелки внутри круга */
+}
+
+/* Пагинация для галереи мероприятий */
+.events-gallery-pagination.swiper-pagination-bullets {
+  position: relative;
+  bottom: -20px;
+  /* Отступ снизу */
+  text-align: center;
+  width: 100%;
+}
+
+.events-gallery-pagination .swiper-pagination-bullet {
+  background: #CBB89A;
+  /* Цвет неактивной точки */
+  opacity: 0.5;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.events-gallery-pagination .swiper-pagination-bullet-active {
+  background: #6F5438;
+  /* Цвет активной точки */
+  opacity: 1;
+}
+
+/* Group 6 */
+.rooms-gallery {
+  /* width: 1200px; */
+  /* Закомментировано, так как контейнер wrapper будет управлять шириной */
+  /* height: 416px; */
+  /* Высота будет определяться содержимым */
+  flex: none;
+  /* order: 3; */
+  flex-grow: 0;
+  margin-bottom: 50px;
+  /* Отступ снизу для разделения с другими блоками */
+}
+
+.rooms-gallery .wrapper {
+  /* width: 1200px; */
+  /* УДАЛЕНО: Чтобы Swiper занимал всю ширину контейнера */
+  margin: 0 auto;
+  /* Центрирование */
+  padding: 0 20px;
+  /* Отступы по бокам */
+  overflow: hidden;
+  /* Добавляем, чтобы обрезать содержимое, выходящее за границы */
+}
+
+/* Group 4 (Заголовок и кнопка) */
+.rooms-gallery__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: absolute; */
+  /* Убрано абсолютное позиционирование */
+  width: 100%;
+  /* Занимает всю доступную ширину */
+  height: 65px;
+  margin-bottom: 30px;
+  /* Отступ между заголовком и галереей */
+}
+
+/* Наши залы */
+.rooms-gallery__title {
+  /* position: absolute; */
+  /* Убрано абсолютное позиционирование */
+  /* width: 249px; */
+  /* Ширина будет определяться контентом */
+  height: 51px;
+  /* left: 120px; */
+  /* top: 1653px; */
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 51px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #6F5438;
+  margin: 0;
+  /* Сброс стандартных отступов h2 */
+}
+
+/* Frame 3 (Кнопка "Смотреть все залы") */
+.rooms-gallery__button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 21px 10px 21px 30px;
+  gap: 30px;
+  /* position: absolute; */
+  /* Убрано абсолютное позиционирование */
+  width: 268px;
+  height: 65px;
+  /* left: 1052px; */
+  /* top: 1646px; */
+  border: 1px solid #CBB89A;
+  border-radius: 100px;
+  text-decoration: none;
+  /* Убрать подчеркивание ссылки */
+  color: #6F5438;
+  /* Цвет текста кнопки */
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  /* Плавный переход для hover-эффектов */
+}
+
+.rooms-gallery__button:hover {
+  background-color: #CBB89A;
+  color: #FFFFFF !important;
+  text-decoration: none;
+}
+
+.rooms-gallery__button:hover .rooms-gallery__button-icon {
+  background-color: #FFFFFF;
+}
+
+/* Смотреть все залы (Текст кнопки) */
+.rooms-gallery__button span {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Frame 4 (Иконка кнопки) */
+.rooms-gallery__button-icon {
+  width: 45px;
+  height: 45px;
+  background: #CBB89A;
+  border-radius: 100px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  position: relative;
+  /* Для позиционирования внутренней иконки */
+  transition: background-color 0.3s ease;
+}
+
+.rooms-gallery__button-icon::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 11px;
+  left: calc(50% - 14px/2 - 0.5px);
+  top: calc(50% - 11px/2);
+  background: #6F5438;
+  /* Цвет иконки-стрелки */
+  mask: url('data:image/svg+xml;utf8,<svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.75 5.5L1 5.5M12.75 5.5L7.8125 1.5M12.75 5.5L7.8125 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.75 5.5L1 5.5M12.75 5.5L7.8125 1.5M12.75 5.5L7.8125 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+  background-color: #6F5438;
+  /* Цвет иконки */
+  transition: background-color 0.3s ease;
+}
+
+.rooms-gallery__button:hover .rooms-gallery__button-icon::before {
+  background-color: #CBB89A;
+  /* Цвет иконки при наведении */
+}
+
+/* Group 5 & Frame 38 (Галерея изображений) */
+.rooms-gallery__grid {
+  /* Эти стили больше не нужны для flex, так как Swiper управляет расположением слайдов */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* align-items: flex-start; */
+  /* padding: 0px; */
+  /* gap: 20px; */
+  width: 100%;
+  /* Занимает всю доступную ширину Swiper-контейнера */
+  height: auto;
+}
+
+/* Frame 13, Frame 17, Frame 20 (Элементы галереи) */
+.rooms-gallery__item {
+  position: relative;
+  /* width: 100%; */
+  /* Убрано: Swiper управляет шириной слайда, указываем ее через slidesPerView и spaceBetween */
+  height: 321px;
+  background: #F0F0F0;
+  border-radius: 20px;
+  /* flex: none; */
+  /* Убрано, Swiper управляет flex-поведением */
+  /* order: 0; */
+  /* flex-grow: 1; */
+  /* Убрано, Swiper управляет flex-поведением */
+  overflow: hidden;
+}
+
+/* image 2 (Изображения внутри элементов) */
+.rooms-gallery__image {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.rooms-gallery__item:hover .rooms-gallery__image {
+  transform: scale(1.07);
+  /* Увеличение на 5% при наведении на элемент галереи */
+}
+
+.rooms-gallery__image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(16, 16, 16, 0.1275) 60.32%, rgba(16, 16, 16, 0.7225) 100%);
+  border-radius: 20px;
+}
+
+/* Царский, Каминный, Итальянский (Названия залов) */
+.rooms-gallery__name {
+  position: absolute;
+  width: auto;
+  height: 23px;
+  left: 30px;
+  top: 245px;
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  z-index: 10;
+  /* Размещаем текст выше градиента */
+}
+
+/* До 12 человек (Описание вместимости) */
+.rooms-gallery__capacity {
+  position: absolute;
+  width: auto;
+  height: 18px;
+  left: 30px;
+  top: 273px;
+  font-family: 'Onest', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 0.65);
+  z-index: 10;
+  /* Размещаем текст выше градиента */
+}
+
+/* Стили для Swiper */
+.rooms-gallery-swiper {
+
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Пагинация */
+.rooms-gallery-pagination.swiper-pagination-bullets {
+  position: relative;
+  bottom: -20px;
+  /* Отступ снизу */
+  text-align: center;
+  width: 100%;
+}
+
+.rooms-gallery-pagination .swiper-pagination-bullet {
+  background: #CBB89A;
+  /* Цвет неактивной точки */
+  opacity: 0.5;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.rooms-gallery-pagination .swiper-pagination-bullet-active {
+  background: #6F5438;
+  /* Цвет активной точки */
+  opacity: 1;
+}
+/* Убрать голубое выделение при фокусе */
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+a, button, input, select, textarea, [tabindex] {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+.nav-link:focus,
+.nav-link:active,
+.shipping-block__tabs .nav-link:focus,
+.shipping-block__tabs .nav-link:active,
+.news__tabs .nav-link:focus,
+.news__tabs .nav-link:active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+.nav-link,
+.shipping-block__tabs .nav-link,
+.news__tabs .nav-link {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.shipping-block__tabs .nav-link::selection,
+.news__tabs .nav-link::selection,
+.nav-link::selection {
+    background: transparent;
+}
+
+.shipping-block__tabs .nav-link::-moz-selection,
+.news__tabs .nav-link::-moz-selection,
+.nav-link::-moz-selection {
+    background: transparent;
+}
+/* Для Yandex Browser */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .nav > li > a,
+    .nav-link,
+    .shipping-block__tabs .nav-link,
+    .news__tabs .nav-link {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        background-color: transparent !important;
+    }
+    
+    .nav > li > a:hover,
+    .nav > li > a:focus,
+    .nav > li > a:active {
+        background-color: transparent !important;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    }
+}
+
+/* ============================================================ */
+/* MOBILE ADAPTIVE — главная страница                          */
+/* ============================================================ */
+
+/* --- shipping-block (Отель / Караоке MAJOR) --- */
+@media (max-width: 1200px) {
+  .shipping-block {
+    height: auto;
+  }
+
+  .shipping-block__tabs .nav-link {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .shipping-block__tab-content-wrapper {
+    height: 280px;
+  }
+
+  .shipping-block__gallery-container .banket .swiper-slide {
+    width: calc(50% - 10px) !important;
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shipping-block {
+    margin-bottom: 30px;
+  }
+
+  .shipping-block__tabs .nav-link {
+    font-size: 20px;
+  }
+
+  .shipping-block__tabs-header {
+    height: auto;
+    gap: 15px;
+  }
+
+  .shipping-block__tab-content-wrapper {
+    height: 220px;
+  }
+
+  .shipping-block__gallery-container .banket .swiper-slide {
+    width: calc(100% - 40px) !important;
+    height: 220px;
+  }
+}
+
+/* --- news tabs (Новости / Акции / Блог) --- */
+@media (max-width: 1200px) {
+  .news__tabs .nav-link {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .news__tabs-header {
+    height: auto;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .news__tabs .nav-link {
+    font-size: 20px;
+  }
+
+  .news__tabs-header {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .news__tab-divider {
+    margin: 0 8px;
+  }
+}
+
+/* --- events-gallery (Мероприятия) --- */
+@media (max-width: 1200px) {
+  .events-gallery__title {
+    font-size: 28px;
+    line-height: 1.2;
+    height: auto;
+  }
+
+  .events-gallery__header {
+    height: auto;
+  }
+
+  .events-gallery__grid {
+    height: 300px;
+  }
+
+  .events-gallery__item {
+    height: 300px;
+  }
+
+  .events-gallery__name {
+    top: auto;
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-gallery__title {
+    font-size: 22px;
+  }
+
+  .events-gallery__header {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .events-gallery__button {
+    width: auto;
+  }
+
+  .events-gallery__grid {
+    height: 240px;
+  }
+
+  .events-gallery__item {
+    height: 240px;
+  }
+
+  .events-gallery__name {
+    font-size: 14px;
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .events-gallery__icon {
+    right: 15px;
+    top: 15px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* --- rooms-gallery (Наши залы) --- */
+@media (max-width: 1200px) {
+  .rooms-gallery__title {
+    font-size: 28px;
+    line-height: 1.2;
+    height: auto;
+  }
+
+  .rooms-gallery__header {
+    height: auto;
+  }
+
+  .rooms-gallery__item {
+    height: 260px;
+  }
+
+  .rooms-gallery__name {
+    top: auto;
+    bottom: 38px;
+  }
+
+  .rooms-gallery__capacity {
+    top: auto;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms-gallery__title {
+    font-size: 22px;
+  }
+
+  .rooms-gallery__header {
+    flex-wrap: wrap;
+    gap: 15px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .rooms-gallery__button {
+    width: auto;
+  }
+
+  .rooms-gallery__item {
+    height: 220px;
+  }
+
+  .rooms-gallery__name {
+    font-size: 14px;
+    left: 20px;
+    bottom: 30px;
+  }
+
+  .rooms-gallery__capacity {
+    left: 20px;
+    bottom: 12px;
+  }
+}
+
+/* --- Общие кнопки (маленькие телефоны) --- */
+@media (max-width: 480px) {
+  .common-button {
+    width: auto;
+    height: 50px;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .rooms-gallery__button,
+  .events-gallery__button {
+    padding: 15px 20px;
+    height: 50px;
+    gap: 15px;
+  }
+}
+
+/* --- Убрать боковой скрол на мобильных --- */
+@media (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body > *,
+  main,
+  section,
+  footer,
+  header,
+  .wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+  }
+}
+
+/* ===================================================
+ * Hero section (section.video) — мобильные стили
+ * =================================================== */
+
+/* Кнопка "Заказать банкет" в Hero: скрыта по умолчанию (десктоп) */
+.hero-mobile-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Перекрытие под мобильным хедером (~60px) вместо десктопных -160px */
+  section.video {
+    margin-top: -60px !important;
+  }
+
+  /* Высота изображения — на весь экран */
+  section.video .swiper-slide img,
+  section.video .swiper-slide video {
+    height: 100svh !important;
+    height: 100vh !important; /* fallback */
+  }
+
+  /* Заголовок в Hero на мобильных */
+  section.video .box-heading {
+    font-size: clamp(32px, 9vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  /* Подзаголовок в Hero на мобильных */
+  section.video .subtitle {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 85%;
+    margin: 0 auto 24px;
+  }
+
+  /* Выравниваем контент по центру */
+  section.video .swiper-slide .wrapper {
+    padding: 0 20px;
+    align-items: center;
+  }
+
+  /* Скрываем кнопку "Подробнее" на мобильных */
+  .hero-desktop-link {
+    display: none !important;
+  }
+
+  /* Показываем и стилизуем "Заказать банкет" на мобильных */
+  .hero-mobile-cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 30px;
+    width: 247px;
+    height: 65px;
+    background: #CBB89A;
+    border-radius: 100px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Onest', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+
+  .hero-mobile-cta:hover,
+  .hero-mobile-cta:focus {
+    background: #6F5438;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  .hero-mobile-cta__icon {
+    width: 45px;
+    height: 45px;
+    background: #6F5438;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+  }
+
+  .hero-mobile-cta:hover .hero-mobile-cta__icon {
+    background: #CBB89A;
+  }
+}
