@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { leadSchema } from "@/shared/validation/lead";
 import { deliverLead } from "@/lib/lead-delivery";
+import { sanitizeUnknown } from "@/lib/security";
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
+    const body = sanitizeUnknown(await request.json());
     const parsed = leadSchema.safeParse(body);
 
     if (!parsed.success) {

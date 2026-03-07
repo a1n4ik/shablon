@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   return buildMetadata({
-    title: `${category.title} — цены в Краснодаре | МедПрайм`,
-    description: `${category.description} Актуальная структура цен медицинского центра МедПрайм в Краснодаре.`,
+    title: `${category.title} — цены в Ставрополе | Персона`,
+    description: `${category.description} Актуальная структура цен медицинского центра Персона в Ставрополе.`,
     canonicalPath: `/prices/${category.slug}`,
   });
 }

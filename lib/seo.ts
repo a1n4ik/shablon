@@ -15,6 +15,13 @@ export function buildMetadata(input: BuildMetadataInput = {}): Metadata {
   const path = input.canonicalPath ?? input.path ?? "/";
   const canonical = absoluteUrl(path);
   const image = absoluteUrl(input.image ?? siteConfig.defaultOg);
+  const defaultKeywords = [
+    `медицинский центр ${siteConfig.city}`,
+    `клиника ${siteConfig.city}`,
+    "диагностика и лечение",
+    "прием врачей",
+    siteConfig.name,
+  ];
 
   return {
     metadataBase: new URL(siteConfig.url),
@@ -41,7 +48,7 @@ export function buildMetadata(input: BuildMetadataInput = {}): Metadata {
       description,
       images: [image],
     },
-    keywords: input.keywords,
+    keywords: input.keywords ?? defaultKeywords,
   };
 }
 
