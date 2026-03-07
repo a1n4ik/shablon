@@ -52,6 +52,8 @@ cp .env.example .env.local
 npm install
 npm run build
 PORT=3001 npm run start
+# или
+PORT=3001 node index.js
 ```
 
 После этого сайт будет доступен на `http://127.0.0.1:3001`.

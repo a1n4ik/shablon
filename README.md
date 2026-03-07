@@ -55,3 +55,17 @@ npm run dev
 ./scripts/run-next-near-wp.sh 3001
 ```
 
+
+## Где файл index и как запускать
+
+Это проект на **Next.js App Router**, поэтому вместо классического `index.php`/`index.html` главная страница находится в:
+
+- `app/page.tsx`
+
+Чтобы был привычный точечный вход, добавлен корневой файл запуска:
+
+```bash
+node index.js         # production (next start)
+node index.js --dev   # development (next dev)
+```
+
