@@ -44,3 +44,14 @@ npm run dev
 - `ADMIN_LOGIN` — логин администратора.
 - `ADMIN_PASSWORD` — пароль администратора.
 - `ADMIN_SESSION_SECRET` — секрет подписи cookie-сессии админа.
+
+## Быстрая установка рядом с WordPress
+
+См. пошаговый файл: `QUICK_INSTALL_RU.md`.
+
+Также есть скрипт быстрого запуска:
+
+```bash
+./scripts/run-next-near-wp.sh 3001
+```
+
