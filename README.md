@@ -40,3 +40,7 @@ npm run dev
 
 - `NEXT_PUBLIC_SITE_URL` — базовый адрес сайта для canonical, sitemap и schema.
 - `LEADS_WEBHOOK_URL` — webhook для отправки заявок в CRM / Telegram / email-bridge.
+- `SQLITE_DB_PATH` — путь к SQLite-базе сайта (контент админ-панели).
+- `ADMIN_LOGIN` — логин администратора.
+- `ADMIN_PASSWORD` — пароль администратора.
+- `ADMIN_SESSION_SECRET` — секрет подписи cookie-сессии админа.

@@ -1,6 +1,7 @@
 import { AppointmentModal } from "@/features/modals/appointment-modal";
 import { Button } from "@/shared/ui/button";
 import { Container } from "@/components/layout/container";
+import { siteConfig } from "@/config/site";
 
 type CtaStripProps = {
   title: string;
@@ -21,7 +22,7 @@ export function CtaStrip({ title, description, page }: CtaStripProps) {
             <div className="flex flex-col gap-3 sm:flex-row">
               <AppointmentModal triggerLabel="Записаться" triggerVariant="secondary" page={page} />
               <Button asChild variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10">
-                <a href="tel:+78612054477">Позвонить</a>
+                <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`}>Позвонить</a>
               </Button>
             </div>
           </div>

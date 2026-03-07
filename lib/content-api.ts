@@ -5,22 +5,23 @@ import { generalFaqs } from "@/content/faqs";
 import { priceCategories } from "@/content/prices";
 import { reviews } from "@/content/reviews";
 import { serviceCategories, services } from "@/content/services";
+import { getCmsOverrides } from "@/lib/cms-overrides";
 
 export const revalidateSeconds = 60 * 60;
 
 export const contentApi = {
-  getClinicInfo: () => clinicInfo,
-  getContactInfo: () => contactInfo,
-  getServices: () => services,
-  getServiceCategories: () => serviceCategories,
-  getServiceBySlug: (slug: string) => services.find((item) => item.slug === slug),
-  getDoctors: () => doctors,
-  getDoctorBySlug: (slug: string) => doctors.find((item) => item.slug === slug),
-  getArticles: () => articles,
-  getArticleBySlug: (slug: string) => articles.find((item) => item.slug === slug),
-  getFaqs: () => generalFaqs,
-  getReviews: () => reviews,
-  getPriceCategories: () => priceCategories,
+  getClinicInfo: () => getCmsOverrides().clinicInfo ?? clinicInfo,
+  getContactInfo: () => getCmsOverrides().contactInfo ?? contactInfo,
+  getServices: () => getCmsOverrides().services ?? services,
+  getServiceCategories: () => getCmsOverrides().serviceCategories ?? serviceCategories,
+  getServiceBySlug: (slug: string) => (getCmsOverrides().services ?? services).find((item) => item.slug === slug),
+  getDoctors: () => getCmsOverrides().doctors ?? doctors,
+  getDoctorBySlug: (slug: string) => (getCmsOverrides().doctors ?? doctors).find((item) => item.slug === slug),
+  getArticles: () => getCmsOverrides().articles ?? articles,
+  getArticleBySlug: (slug: string) => (getCmsOverrides().articles ?? articles).find((item) => item.slug === slug),
+  getFaqs: () => getCmsOverrides().faqs ?? generalFaqs,
+  getReviews: () => getCmsOverrides().reviews ?? reviews,
+  getPriceCategories: () => getCmsOverrides().priceCategories ?? priceCategories,
 };
 
 export type ContentApi = typeof contentApi;
