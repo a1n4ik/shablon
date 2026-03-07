@@ -5,7 +5,8 @@ export const mainNavigation = [
   { href: "/prices", label: "Цены" },
   { href: "/articles", label: "Статьи" },
   { href: "/about", label: "О клинике" },
-  { href: "/contacts", label: "Контакты" }
+  { href: "/contacts", label: "Контакты" },
+  { href: "/admin", label: "Админ" }
 ];
 
 export const footerNavigation = {
@@ -17,12 +18,12 @@ export const footerNavigation = {
   ],
   services: [
     { href: "/services/ginekologiya", label: "Гинекология" },
-    { href: "/services/terapiya", label: "Терапия" },
-    { href: "/services/kardiologiya", label: "Кардиология" },
-    { href: "/services/uzi", label: "УЗИ" }
+    { href: "/services/endokrinologiya", label: "Эндокринология" },
+    { href: "/services/ultrazvukovaya-diagnostika", label: "УЗИ" },
+    { href: "/services/check-up-programmy", label: "Check-up" }
   ],
   content: [
-    { href: "/articles", label: "Блог" },
+    { href: "/articles", label: "Статьи" },
     { href: "/prices", label: "Прайс-лист" },
     { href: "/services", label: "Каталог услуг" }
   ]

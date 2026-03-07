@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { mainNavigation } from "@/config/navigation";
 import { Button } from "@/shared/ui/button";
+import { siteConfig } from "@/config/site";
 import { AppointmentModal } from "@/features/modals/appointment-modal";
 
 export function MobileNav() {
@@ -40,7 +41,7 @@ export function MobileNav() {
             <div className="grid gap-3">
               <AppointmentModal triggerLabel="Записаться" page="mobile-menu" />
               <Button asChild variant="outline">
-                <a href="tel:+78612054477">Позвонить</a>
+                <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`}>Позвонить</a>
               </Button>
             </div>
           </div>

@@ -40,3 +40,43 @@ npm run dev
 
 - `NEXT_PUBLIC_SITE_URL` — базовый адрес сайта для canonical, sitemap и schema.
 - `LEADS_WEBHOOK_URL` — webhook для отправки заявок в CRM / Telegram / email-bridge.
+- `SQLITE_DB_PATH` — путь к SQLite-базе сайта (контент админ-панели).
+- `ADMIN_LOGIN` — логин администратора.
+- `ADMIN_PASSWORD` — пароль администратора.
+- `ADMIN_SESSION_SECRET` — секрет подписи cookie-сессии админа.
+
+## Быстрая установка рядом с WordPress
+
+См. пошаговый файл: `QUICK_INSTALL_RU.md`.
+
+Также есть скрипт быстрого запуска:
+
+```bash
+./scripts/run-next-near-wp.sh 3001
+```
+
+
+## Где файл index и как запускать
+
+Это проект на **Next.js App Router**, поэтому вместо классического `index.php`/`index.html` главная страница находится в:
+
+- `app/page.tsx`
+
+Чтобы был привычный точечный вход, добавлен корневой файл запуска:
+
+```bash
+node index.js         # production (next start)
+node index.js --dev   # development (next dev)
+```
+
+
+## Troubleshooting Vercel: "No Next.js version detected"
+
+Если Vercel пишет `No Next.js version detected`, проверьте:
+
+1. **Root Directory** в настройках проекта Vercel должен указывать на корень репозитория (где лежит `package.json`).
+2. В `package.json` есть `next` в `dependencies` (в этом проекте он уже есть).
+3. Перезапустите деплой после очистки кэша (**Redeploy → Clear build cache**).
+
+В проекте добавлен `vercel.json` с явным Next builder (`@vercel/next`) и командами install/build, чтобы Vercel корректно определял фреймворк.
+

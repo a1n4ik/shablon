@@ -1,24 +1,24 @@
 export const siteConfig = {
-  name: "МедПрайм",
-  legalName: 'ООО "МедПрайм Клиника"',
-  url: "https://medprime-clinic.ru",
-  city: "Краснодар",
-  region: "Краснодарский край",
-  tagline: "Точная диагностика и приём врачей без очередей",
+  name: "Персона",
+  legalName: 'ООО "Персона"',
+  url: "https://persona26med.ru",
+  city: "Ставрополь",
+  region: "Ставропольский край",
+  tagline: "Диагностика и лечение в многопрофильном центре",
   description:
-    "Частный медицинский центр в Краснодаре: гинекология, терапия, кардиология, УЗИ, анализы и чек-апы. Современное оборудование, опытные врачи и запись на удобное время.",
+    "Медицинский центр «Персона» в Ставрополе: консультации профильных специалистов, check-up программы, диагностика, анализы и сопровождение пациентов.",
   locale: "ru_RU",
-  phone: "+7 (861) 205-44-77",
-  email: "info@medprime-clinic.ru",
-  address: "г. Краснодар, ул. Северная, 245",
+  phone: "+7 (962) 451-51-56",
+  email: "persona26med@yandex.ru",
+  address: "г. Ставрополь, ул. Серова, 470/4, 355013",
   coordinates: {
-    lat: 45.041268,
-    lng: 38.976517
+    lat: 45.0238,
+    lng: 41.9684,
   },
-  whatsapp: "https://wa.me/78612054477",
-  telegram: "https://t.me/medprime_clinic",
+  whatsapp: "https://wa.me/79624515156",
+  telegram: "https://t.me/persona26med_stv",
   defaultOg: "/opengraph-image",
-  themeColor: "#0f766e"
+  themeColor: "#0ea5e9",
 };
 
 export type SiteConfig = typeof siteConfig;

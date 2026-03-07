@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function absoluteUrl(path = "") {
-  const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://medprime-clinic.ru";
+  const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://persona26med.ru";
   return new URL(path, origin).toString();
 }
 

@@ -1,7 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
 import { ShieldCheck, Stethoscope, Timer } from "lucide-react";
 import { Container } from "@/components/layout/container";
+import { siteConfig } from "@/config/site";
 import { AppointmentModal } from "@/features/modals/appointment-modal";
 import { Button } from "@/shared/ui/button";
 
@@ -26,7 +26,7 @@ export function HeroSection({ city }: HeroSectionProps) {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <AppointmentModal triggerLabel="Записаться на приём" page="home-hero" />
             <Button asChild variant="outline" size="lg">
-              <a href="tel:+78612054477">Позвонить в клинику</a>
+              <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`}>Позвонить в клинику</a>
             </Button>
           </div>
 
